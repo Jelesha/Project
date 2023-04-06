@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>XO</title>
+        <!--Оформление-->
+        <style> 
+            body{
+                text-align: center;
+            }
+            table{border:1px solid;
+            margin:auto;}
+            td{
+                border:1px solid;
+                width:80px;
+                height:80px;
+                text-align: center;
+            }
+
+            h2{
+                margin:auto;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id = "nav">
+            <tr>
+                <td colspan="3" id = "mode"><a href="Page1.html">Выход</a></td> <!--Выход, на пустую страницу с кнопкой для захода обратно на эту страницу -->
+            </tr>
+            <tr>
+                <td colspan="3" id = "Gamerules"><a href ="Gamerules.html">Правила Игры</a></td> <!--Выход на страницу с правилами игры -->
+            </tr>
+        </div>
+        <p id="countdown">Начало отсчёта</p> <!--Таймер и скрипт для его работы-->
+        <script src = "js/Timer.js"></script>
+        <h1 >XO</h1> 
+        <table>
+            <tr> <!--Игровое поле-->
+                <td class="box" id="box1"><h2>?</h2></td>
+                <td class="box" id="box2"><h2>?</h2></td>
+                <td class="box" id="box3"><h2>?</h2></td>
+            </tr>
+            <tr>
+                <td class="box" id="box4"><h2>?</h2></td>
+                <td class="box" id="box5"><h2>?</h2></td>
+                <td class="box" id="box6"><h2>?</h2></td>
+            </tr>
+            <tr>
+                <td class="box" id="box7"><h2>?</h2></td>
+                <td class="box" id="box8"><h2>?</h2></td>
+                <td class="box" id="box9"><h2>?</h2></td>
+            </tr>
+            <tr> <!--Поля с информацией-->
+                <td colspan="3" id="winBox"><b>Соберите 3 в ряд для победы</b></td> <!-- Окно с меняющейся информацией, которая берётся из Game.js-->
+            </tr>
+            <tr>
+                <td colspan="3"><a href="ttt.html">Новая Игра</a></td> <!-- Новая игра, перезапускает окно с игрой, сбрасывая прогресс, который присутствовал на странце -->
+            </tr>
+        </table>
+    </body>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.4.min.js"></script> <!--Библиотека Jquery, необходимая для работы XO-->
+    <script src = "js/Game.js"></script> <!--Отсюда берётся информация для XO, по типу того, кто ходит, условий победы и меняющейся информации для объекта WinBox -->
+</html>
