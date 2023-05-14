@@ -1,0 +1,75 @@
+<head>
+    <title>Список Игроков</title>
+    <style> 
+        body{
+            text-align: center;
+        }
+        table{border:1px solid;
+        margin:auto;}
+        td{
+            border:1px solid;
+            width:80px;
+            height:80px;
+            text-align: center;
+        }
+
+        h2{
+            margin:auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <body>
+        <div id = "nav"> <!--Навигационная часть-->
+            <tr>
+                <td colspan="3" id = "mode"><a href="Page1.html">Выход</a></td> 
+            </tr>
+            <tr>
+                <td colspan="3" id = "Gamerules"><a href ="Gamerules.html">Правила Игры</a></td> 
+            </tr>
+            <tr>
+                <td colspan="3" id = "ttt"><a href ="ttt.html">Крестики-Нолики</a></td>
+            </tr>
+            <div class="container"> <!--Место заполнения информации об игроках-->
+                <div class="col-sm-6" style="border: 1px solid gray;">
+                <h2>Заполнение списка игроков</h2>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Заполнить имя первого игрока" name="name">
+                      </div>
+        
+                  <div class="form-group">
+                    <label for="name-2">Имя 2:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Заполнить имя второго игрока" name="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd">Разделитель:</label>
+                    <input type="password" class="form-control" id="psw" placeholder="НЕ ЗАПОЛНЯТЬ, РАБОТАЕТ КАК РАЗДЕЛИТЕЛЬ" name="pwd">
+                  </div>
+                 
+                  <button type="button" onclick="saveData()" id="save_btn" class="btn btn-default">Заполнить</button>
+                </form>
+              </div>
+              <div class="col-sm-6" style="border: 1px solid gray;">
+                <h2 style="text-align: center;">Список Игроков</h2>
+                <div class="row">
+                  <div class="col-sm-4" style="background-color: #a6bcda;padding: 10px;">Имя, Имя 2 </div> <!--Информация по обеим игрокам, зарегистрированным в базе будет находится под этой колонной, разделителем является третий пункт -->
+        
+                </div>
+                <div id="showUsers"></div>
+              </div>
+              </div>
+              <style>
+                td,th {
+	font-family: monospace;
+	padding: 4px;
+	background-color: #ccc;
+}
+
+              </style>
+              </body>
+              <script src="js/listofplayerscript.js"></script> <!--Скрипт, позволяющий этой системе работать-->
+        
+</body>
